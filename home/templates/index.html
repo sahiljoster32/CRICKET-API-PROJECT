@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    {% load static %}
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}"
+</head>
+<body class="matrix-green">
+<pre>
+<pre>
+<span class="input-space"></span>                                ____ ___  _______  _______ ______                      ___     _____  _______                _____  _______  _____   ________ _______  _____  ________
+<span class="input-space"></span>                                |   \| |  |  ___|  |  _  | | ___ \                    / ^ \    |  # \ |__ __|                |  # \ |  _  | / ___ \ |____ __| |  ___| /  ___| |__ ___|
+<span class="input-space"></span>                                | |\ \ |  |  __|   | ** /  | |  | |                  /  _  \   |  __/   | |                  |  __/ | ** /  | | | |  __ | |   |  __|  | |       | |
+<span class="input-space"></span>                                | | \  |  |  |__   |   \   | |__| |                 /  / \  \  | |    __| |__                | |    |   \   | |_| |  ||_| |   |  |__  | |___    | |
+<span class="input-space"></span>                                |_|  \_|  |_____|  |_|\_\  |_____/                 /__/   \__\ |_|    |_____|                |_|    |_|\_\  \_____/  |____|   |_____| \_____|   |_|
+</pre>
+<hr>
+<span class="main-content">
+  +------------------+                                        +-<b>Create Account</b>-------------------+                                                  +-<b>Description of cricket API endpoint</b>--------------+
+  |                  |                                        | Here you can create new account. |                                                  |                                                  |
+  |  <b>HERE YOU ARE</b>    |                            :---------->|                                  |                  :---------------------x-------->| -This Api use <b>'Beautiful soup'</b> for parsing data  |
+  |     <b>HOME PAGE!!</b>  |>-------:                   |           |    <a href="/api/user/create/" style="color: blue;">Create your account here!!</a>    |                  |                     |         | -Site used to fetch data is <a href="https://www.espncricinfo.com/" style="color: blue;">espncricinfo.com</a>     |
+  |                  |        |                   |           +----------------------------------+                  |                     |         | -Btw everything is legal Acc. to robots.txt      |
+  +------------------+        |                   |                                                                 |                     |         | -In response, you get user_account, meta data    |
+                              |                   |                                                                 |                     |         |   and main data.                                 |
+                              |                   |           +-<b>GENERATE TOKEN</b>---------<i><b>mandatory</b></i>-+                  |                     |         +--------------------------------------------------+
+                              |                   |           | Here you can generate Auth token |                  |                     |
+                              |            :------:---------->| for your future requests.        |                  ^                     |         +--------------------------------------------------+
+                      +--------------+     |      |           |                                  |     +-------------------------+        :---------|             <a href="/cricket-data/get/" style="color: blue;">Go and Fetch some data !!</a>            |>-----:
+                      |              |     |      |           |      <a href="/api/user/token/" style="color: blue;">Generate your token !!</a>      |     |                         |                  +--------------------------------------------------+      |
+                      |  <b>USER CAN!!</b>  |>----:      |           +----------------------------------+     |  Fetch data for Sports  |                                                                            |
+                      |              |            |                                                    |      called <b>Cricket</b>     |                                                                            |
+                      +--------------+            |           +-<b>UPDATE ACCOUNT</b>-------------------+     |                         |                                                                            |
+                              |                   |           | Here you can update your account |     +-------------------------+                     +-<b>How to Fetch</b>--------------------------+              |
+                              |                   :---------->| details.                         |                  ^                                  |                                       |              |
+                              |                               |                                  |                  |                                  | -<b>country</b>: enter in which country's    |              |
+                              |                               |    <a href="/api/user/manage/" style="color: blue;">Update your account here !!</a>   |                  |                                  |   team you are interested. like india |              |
+                              |                               +----------------------------------+                  |                                  |                                       |              |
+                              |                                                                                     |                                  | -<b>main category</b>: batting/bowling       :--------------:
+                              :-------------------------x--------------------------------------------X--------------:                                  | -<b>sub category</b>: like test_match        |              |
+                                                        |                                            |                                                 | -<b>Sorting</b>: high_scores                 |              |
+                                                        |                                            |                                                 |                                       |              |
+                                                        |                                            |                                                 | -<b><i>How to access API</i></b>: <a href="https://www.espncricinfo.com/" style="color: blue;">Sample Video</a>      |              |
+                                                 +---------------+                                   |                                                 |                                       |              |
+                                                 |               |                <b>"NOTE: Make sure you have auth token!"</b>       |/-------------\|       +---------------------------------------+              |
+                                                 | <b><i>Coming soon!!</i></b> |                                                             ||  <span class="change-background"><b>TO CHANGE</b></span>  ||                                                              |
+                                                 |               |                                                             ||    <span class="change-background"><b>VIEW</b></span>     ||<<-----\                                                      |
+                                                 +---------------+                                                             ||  <span class="change-background"><i>HIT HERE</i></span>   ||       |                                                      |
+                                                         |                                                                     |\-------------/|       \------------------------------------------------------/
+                                                         |       
+________________                                         |
+Time: <span class="current-time">00:00:00</span>                                           X Road currently blocked :()
+</span>
+</pre>                                                                                                                                                                                                                      
+</body>
+</html>

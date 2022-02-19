@@ -1,0 +1,29 @@
+
+.matrix-simple {
+    background-color: black;
+    color: white;
+}
+
+.white-black-text {
+    background-color: white;
+    color: black;
+}
+
+.gray-theme {
+    background-color: rgb(63, 63, 63);
+    color: rgb(223, 56, 56);
+}
+
+.orange-brown {
+    background-color: brown;
+    color: orange;
+}
+
+.matrix-green {
+    background-color: black;
+    color: rgb(0, 233, 0);
+}
+
+.change-background {
+    cursor: pointer;
+}
