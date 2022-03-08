@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
+from typing import List
 
-
-urlpatterns = [
+# Path function is inbuilt function and we don't
+# have typing info regarding the same.
+urlpatterns: List[path] = [
     path('admin/', admin.site.urls),
     path('api/user/', include('user.urls')),
     path('cricket-data/', include('data.urls')),
