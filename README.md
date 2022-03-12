@@ -1,2 +1,2 @@
 # NERD-API-PROJECT
-This project helps you get raw data, of our beloved indian cricket team.
+(README is not updated) but it will soon!!
