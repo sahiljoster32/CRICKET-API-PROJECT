@@ -121,10 +121,10 @@ AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
 # Currently we have no plan for Internationalization:-
 # Because we are using third party package (beautiful soup)
 # to parse data for API. 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_TZ = True
+LANGUAGE_CODE: str = 'en-us'
+TIME_ZONE: str = 'UTC'
+USE_I18N: bool = True
+USE_TZ: bool = True
 
 
 # Static files (CSS, JavaScript, Images)

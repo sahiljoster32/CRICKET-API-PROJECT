@@ -13,14 +13,15 @@ import pprint  # should only be used for print
 class cricket_data():
 
     """
-    DOC: Returns API ready data in json format, 
-    this data is fetch and parsed from site "stats.espncricinfo.com"
+    API ready data in json format.
+
+    X this data is fetch and parsed from site "stats.espncricinfo.com"
         following are the properties to be used for fetching the data:
             1. get_json_data
                 To get data in simple string without any indentation format.
             2. get_parsed_data
                 To get data in complex string with indentation equals to 4 units format.
-    RETURNS: Data is returned in following format:
+        returns: Data is returned in following format:
                 {
                 "meta_data":{
                     "current_stamp":"XXX",
@@ -50,14 +51,16 @@ class cricket_data():
                     .,
                     "player_X":{......
                 }}}
+    X
     """
 
     def __init__(
-            self,
-            main_category: str,
-            main_sub_category: str,
-            subclass: str,
-            country: str) -> None:
+        self,
+        main_category: str,
+        main_sub_category: str,
+        subclass: str,
+        country: str
+    ) -> None:
         """
         DOC: Initializes all private attributes of parsed object.
         """
@@ -87,6 +90,9 @@ class cricket_data():
         """
         DOC: Function to fetch actual raw-data from site and
         supply it into the form of list.
+
+        Args: 
+            unparsed_data- Parsed html beautifulsoup object.
         """
 
         batting_data_unparsed: list = unparsed_data.find_all(class_="data1")
@@ -106,6 +112,9 @@ class cricket_data():
     def _cricket_data_heading(self, unparsed_data: list) -> None:
         """
         DOC: Function to parse and fetch headings of each columns.
+
+        Args: 
+            unparsed_data- Parsed html beautifulsoup object.
         """
 
         main_table_ele = unparsed_data.find("thead")
@@ -123,6 +132,10 @@ class cricket_data():
     def _mainData_binder(self, headings: List, batting_data: List) -> None:
         """
         DOC: Binds the data with their respective field and supply it into dictionary format.
+
+        Args: 
+            headings- heading of each field.
+            batting_data- raw batting data fetched from parsed html.
         """
         headingsLen = len(headings)
         basicDataLen = len(batting_data[0])
@@ -142,6 +155,10 @@ class cricket_data():
     def _metaData_binder(self, headings: List, headings_description: List) -> None:
         """
         DOC: This function fetch and populate meta data from site.
+
+        Args: 
+            headings- heading of each field.
+            headings_description- description of each heading.
         """
 
         fields_description = {}
@@ -165,6 +182,10 @@ class cricket_data():
     def _get_rawData(self, meta_data: Dict[str, Any], main_data: Dict[str, str]) -> None:
         """
         DOC: This returns raw data which was in python format.
+
+        Args: 
+            meta_data- data which contain data for parsed data.
+            main_data- actual parsed data.
         """
         self.raw_data['meta_data'] = meta_data
         self.raw_data['data'] = main_data
@@ -173,6 +194,9 @@ class cricket_data():
         """
         DOC: This function gives json formatted data, without any indentation 
         to send further.
+
+        Returns:
+            Json formatted data.
         """
         return json.dumps(raw_data)
 
@@ -213,7 +237,8 @@ class cricket_data():
 
     def _main_run(self):
         """
-        DOC: Runs all functions accordingly to populate respective properties of cricket_data object.
+        DOC: Runs all functions accordingly to populate respective
+                properties of cricket_data object.
         """
         self._cricket_data_parser(self.unparsed_data)
         self._cricket_data_heading(self.unparsed_data)

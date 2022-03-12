@@ -1,4 +1,6 @@
 
+"""Provide actual URL based on queried params."""
+
 from __future__ import annotations
 from typing import *
 
@@ -13,7 +15,13 @@ class url_segments_cricket:
     2.get_absolute_url
     """
 
-    def __init__(self, category_sub_1: str, category_sub_2: str, subclass_query: str, country: str) -> None:
+    def __init__(
+        self,
+        category_sub_1: str,
+        category_sub_2: str,
+        subclass_query: str,
+        country: str
+    ) -> None:
         self._category_sub_1 = category_sub_1
         self._category_sub_2 = category_sub_2
         self._subclass_query = subclass_query

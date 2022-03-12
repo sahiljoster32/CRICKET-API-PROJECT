@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from data.espnPackage.main import cricket_data
 
+from typing import Any, Dict
 
 class DataFieldSerializer(serializers.Serializer):
     """Serializer for the user authentication object"""
@@ -33,12 +34,12 @@ class DataFieldSerializer(serializers.Serializer):
         if request:
             user = request.user
 
-        user_obj = {
+        user_obj: Dict[str, Any] = {
             'name': user.name,
             'email': user.email
         }
 
-        resource = {
+        resource: Dict[str, Any] = {
             'user': user_obj,
             'meta': cricket_data_object.get_meta_data,
             'main': cricket_data_object.get_main_data
