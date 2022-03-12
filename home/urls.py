@@ -1,8 +1,10 @@
 from django.urls import path
 from home import views
 
-app_name = 'home'
+from typing import List
 
-urlpatterns = [
+app_name: str = 'home'
+
+urlpatterns: List[path] = [
     path('', views.homeView, name='home'),
 ]

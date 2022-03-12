@@ -1,6 +1,10 @@
+
+# Excluding this file, because types of some function is not know.
+
 from django.contrib.auth import get_user_model, authenticate
 from rest_framework import serializers
 
+from core.models import User
 
 class UserSerializers(serializers.ModelSerializer):
     """Serializer for the users object"""
@@ -11,14 +15,14 @@ class UserSerializers(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True, 'min_length': 6}
                         }
 
-    def create(self, validated_data):
+    def create(self, validated_data) -> User:
         """Create a new user with encrypted password and return it"""
         return get_user_model().objects.create_user(**validated_data)
 
-    def update(self, instance, validated_data):
+    def update(self, instance, validated_data) -> User:
         """Update a user, setting the password correctly and return it"""
         password = validated_data.pop('password', None)
-        user = super().update(instance, validated_data)
+        user: User = super().update(instance, validated_data)
 
         if password:
             user.set_password(password)
