@@ -1,3 +1,10 @@
+"""
+NOTE: This file is not a part of main application.
+
+- This file is just to test, that the environment variables are accessible
+  from heroku's cloud machine and Env working fine with heroku.
+"""
+
 import environ
 
 env = environ.Env(
